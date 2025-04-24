@@ -6,47 +6,48 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #000428, #004e92);
   background-size: 400% 400%;
-  animation: gradientBG 20s ease infinite;
-  color: #f0f0f0;
-  line-height: 1.6;
+  animation: gradientFlow 20s ease infinite;
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-@keyframes gradientBG {
+@keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
 header {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   text-align: center;
   padding: 4rem 2rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
+  color: #00eaff;
   margin-bottom: 1rem;
-  animation: fadeInUp 1s ease-out forwards;
-  color: #00ffff;
-  text-shadow: 1px 1px 4px black;
+  text-shadow: 1px 1px 6px #000;
+  animation: fadeInDown 1s ease-in-out;
 }
 
 header p {
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
-  color: #ccc;
-  animation: fadeInUp 1.5s ease-out forwards;
+  color: #ddd;
+  animation: fadeInDown 1.5s ease-in-out;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;
@@ -63,45 +64,38 @@ header p {
 }
 
 .button_menu {
-  background-color: transparent;
-  border: 2px solid #00ffff;
-  color: #00ffff;
-  font-size: 26px;
-  border-radius: 6px;
-  padding: 6px 12px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.button_menu:hover {
-  background-color: #00ffff;
+  background-color: #00eaff;
+  border: none;
   color: black;
+  font-size: 24px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 nav {
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   transition: transform 0.4s ease-in-out;
 }
 
 nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
-  padding: 0;
+  flex-direction: row;
 }
 
 nav ul li {
-  padding: 15px 25px;
+  padding: 15px 20px;
 }
 
 nav ul li a {
-  text-decoration: none;
   color: #ffffff;
+  text-decoration: none;
   font-size: 1.1rem;
-  font-weight: 500;
-  transition: color 0.3s ease, background 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 nav ul li:hover {
@@ -118,26 +112,25 @@ section {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   padding: 2rem;
-  margin-bottom: 2.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(12px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
 }
 
 .card h2 {
-  margin-top: 0;
   font-size: 2rem;
-  color: #00ffff;
+  color: #00eaff;
+  margin-bottom: 0.5rem;
 }
 
 .card p {
+  color: #e0e0e0;
   font-size: 1.1rem;
-  color: #ddd;
 }
 
 @media (max-width: 850px) {
@@ -151,7 +144,6 @@ section {
     right: 0;
     width: 70%;
     transform: translateX(100%);
-    z-index: 1000;
   }
 
   nav.abrir_menu {
@@ -176,17 +168,19 @@ section {
 }
 
 @media (max-width: 500px) {
-  nav ul li a {
-    font-size: 1.5rem;
+  header h1 {
+    font-size: 2.3rem;
+  }
+
+  header p {
+    font-size: 1rem;
   }
 
   nav {
     width: 100%;
   }
 
-  header h1 {
-    font-size: 2.5rem;
+  nav ul li a {
+    font-size: 1.4rem;
   }
-
-  header p {
-    font
+}
