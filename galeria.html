@@ -1,114 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Pollo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoAd</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5rem;
+      text-align: center;
+      background: linear-gradient(45deg, #ff00cc, #3333ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(255, 0, 255, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 255, 255, 0.5);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.4s ease;
+      filter: brightness(1.2) saturate(1.5);
+    }
+
+    .gallery-item:hover img {
+      filter: brightness(1.4) saturate(2);
+      transform: scale(1.1) rotate(1deg);
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="barras">
-            <button onclick="abrir_cerrar_menu()" class="button_menu" id="boton_menu">☰</button>
-        </div>
-
-        <nav id="menu" class="desplegable">
-            <img class="hola" src="img/tecno.png" width="200" height="200" alt="Logo de TecnoAd">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="galeria.html">Producto</a></li>
-                <li><a href="proyecto.html">Envios</a></li>
-                <li><a href="contac.html">Contáctanos</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-    <h1>Empresa de tecnologia y desarrollo</h1>
-    <div class="container">
-        <div class="slide">
-            <div class="item"
-            style="background-image: url(img/pc.jpeg);">
-        <div class="contenet">
-         <div
-         class="des">Computadoras</div>
-         <button>Mas</button>
-        </div>
-            </div>
-            <div class="item"
-            style="background-image: url(img/pc2.jpeg);">
-        <div class="content">
-            <div class="name">Procesador</div>
-            <div class="des">Productos</div>
-            <button>Mas</button>
-        </div>
-        </div>
-        <div class="item"
-        style="background-image: url(img/pro.jpeg);">
-    <div class="content">
-        <div class="name">Procesador</div>
-        <div class="des">Productos</div>
-        <button>Mas</button>
+  <h1>Nuestros Productos</h1>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1015/500/300" alt="Imagen 1">
     </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1025/500/300" alt="Imagen 2">
     </div>
-    <div class="item"
-    style="background-image: url(img/pro2.jpeg);">
-<div class="content">
-    <div class="name">Procesador</div>
-    <div class="des">Productos</div>
-    <button>Mas</button>
-</div>
-</div>
-<div class="item"
-style="background-image: url(img/tar.jpeg);">
-<div class="content">
-<div class="name">Procesador</div>
-<div class="des">Productos</div>
-<button>Mas</button>
-</div>
-</div>
-<div class="item"
-style="background-image: url(img/tar24.jpeg);">
-<div class="content">
-<div class="name">Procesador</div>
-<div class="des">Productos</div>
-<button>Mas</button>
-</div>
-</div>
-<div class="item"
-style="background-image: url(img/tec.jpeg);">
-<div class="content">
-<div class="name">Procesador</div>
-<div class="des">Productos</div>
-<button>Mas</button>
-</div>
-</div>
-
-        </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1035/500/300" alt="Imagen 3">
     </div>
-    <div class="button">
-        <button class="prev">
-            <i class="fa-solid fa-arrow-left">
-
-            </i>
-        </button>
-        <button  class="prev"> <i class="fa-solid fa-arrow-left">
-
-        </i></button>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1045/500/300" alt="Imagen 4">
     </div>
-    </main>
-
-
-    <footer>
-        <ul class="menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Envios</a></li>
-        </ul>
-    </footer>
-
-    <script src="main.js"></script>
-    <script src="script.js"></script>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1055/500/300" alt="Imagen 5">
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1065/500/300" alt="Imagen 6">
+    </div>
+  </div>
 </body>
 </html>
