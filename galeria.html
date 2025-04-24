@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TecnoAd</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+</head>
   <style>
     body {
       margin: 0;
@@ -63,6 +64,24 @@
   </style>
 </head>
 <body>
+  <header>
+    <div class="barras">
+      <button onclick="abrir_cerrar_menu()" class="button_menu" id="boton_menu">☰</button>
+  
+    </div>
+
+    <nav id="menu">
+      <img class="hola" src="logo.png" width="150" height="50" alt="Logo de TecnoAd">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Producto</a></li>
+        <li><a href="proyecto.html">Nuestras tecnologías</a></li>
+        <li><a href="contac.html">Contáctanos</a></li>
+      </ul>
+    </nav>
+    <h1>Bienvenido a TecnoAd</h1>
+    <p>Explora las últimas innovaciones, herramientas inteligentes y soluciones que transforman el mundo digital.</p>
+  </header>
   <h1>Nuestros Productos</h1>
   <div class="gallery">
     <div class="gallery-item">
@@ -83,6 +102,8 @@
     <div class="gallery-item">
       <img src="https://picsum.photos/id/1065/500/300" alt="Imagen 6">
     </div>
+    
   </div>
+   <script src="main.js"></script> 
 </body>
 </html>
