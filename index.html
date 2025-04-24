@@ -1,8 +1,9 @@
-DOCTYPE html>
+<DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
   <title>Tecnología Moderna</title>
   <style>
     body {
@@ -77,6 +78,19 @@ DOCTYPE html>
 </head>
 <body>
   <header>
+    <div class="barras">
+            <button onclick="abrir_cerrar_menu()" class="button_menu" id="boton_menu">☰</button>
+        </div>
+
+        <nav id="menu" class="desplegable">
+            <img class="hola" src="logo.png" width="200" height="200" alt="Logo de TecnoAd">
+            <ul>
+                <li><a href="ace.html">Inicio</a></li>
+                <li><a href="galeria.html">Producto</a></li>
+                <li><a href="proyecto.html">Envios</a></li>
+                <li><a href="contac.html">Contáctanos</a></li>
+            </ul>
+        </nav>
     <h1>Bienvenido a Tecnología Moderna</h1>
     <p>Explora las últimas innovaciones, herramientas inteligentes y soluciones que transforman el mundo digital.</p>
   </header>
@@ -95,5 +109,6 @@ DOCTYPE html>
       <p>Accede a tu información desde cualquier parte del mundo de forma segura y escalable.</p>
     </div>
   </section>
+  <script src="main.js"></script>
 </body>
 </html>
