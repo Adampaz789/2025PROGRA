@@ -5,69 +5,139 @@
 }
 
 body {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 header {
   position: relative;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 4rem 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
-.logo-container {
-  text-align: center;
-  padding: 10px;
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-out forwards;
+  color: #00ffff;
+  text-shadow: 1px 1px 4px black;
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #ccc;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .barras {
   display: none;
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 20px;
   z-index: 1000;
 }
 
 .button_menu {
-  font-size: 30px;
-  background: transparent;
-  border: 2px solid cyan;
-  color: cyan;
-  border-radius: 8px;
-  padding: 5px;
+  background-color: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  font-size: 26px;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button_menu:hover {
+  background-color: #00ffff;
+  color: black;
 }
 
 nav {
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s ease-in-out;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  list-style: none;
+  padding: 0;
 }
 
 nav ul li {
-  padding: 15px 20px;
+  padding: 15px 25px;
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
+  color: #ffffff;
   font-size: 1.1rem;
-  display: block;
-  text-align: center;
+  font-weight: 500;
+  transition: color 0.3s ease, background 0.3s ease;
 }
 
 nav ul li:hover {
-  background-color: rgba(0, 255, 255, 0.3);
-  border-left: 4px solid cyan;
+  background-color: rgba(0, 255, 255, 0.2);
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #00ffff;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #ddd;
 }
 
 @media (max-width: 850px) {
@@ -81,8 +151,6 @@ nav ul li:hover {
     right: 0;
     width: 70%;
     transform: translateX(100%);
-    background-color: black;
-    transition: transform 0.4s ease-in-out;
     z-index: 1000;
   }
 
@@ -105,10 +173,6 @@ nav ul li:hover {
     font-size: 1.3rem;
     text-align: left;
   }
-
-  .button_menu.colocar_x {
-    color: cyan;
-  }
 }
 
 @media (max-width: 500px) {
@@ -119,28 +183,10 @@ nav ul li:hover {
   nav {
     width: 100%;
   }
-}
 
-.h {
-  color: black;
-  font-size: 125px;
-  text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-style: italic;
-}
+  header h1 {
+    font-size: 2.5rem;
+  }
 
-footer {
-  background-color: black;
-  font-family: Arial, sans-serif;
-  color: black;
-}
-
-a p {
-  font-family: Arial, sans-serif;
-  color: black;
-  font-weight: bold;
-}
-
-.pie {
-  text-align: center;
-}
+  header p {
+    font
