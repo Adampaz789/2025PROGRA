@@ -1,41 +1,99 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Tecnoad</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tecnología Moderna</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeInUp 3s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="barras">
-            <button onclick="abrir_cerrar_menu()" class="button_menu" id="boton_menu">☰</button>
-        </div>
+  <header>
+    <h1>Bienvenido a Tecnología Moderna</h1>
+    <p>Explora las últimas innovaciones, herramientas inteligentes y soluciones que transforman el mundo digital.</p>
+  </header>
 
-        <nav id="menu" class="desplegable">
-            <img class="hola" src="logo.png" width="200" height="200" alt="Logo de TecnoAd">
-            <ul>
-                <li><a href="ace.html">Inicio</a></li>
-                <li><a href="galeria.html">Producto</a></li>
-                <li><a href="proyecto.html">Envios</a></li>
-                <li><a href="contac.html">Contáctanos</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-    <h1>Empresa de tecnologia y desarrollo</h1>
-    </main>
-
-    <footer>
-        <ul class="menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Envios</a></li>
-        </ul>
-    </footer>
-
-    <script src="main.js"></script>
+  <section>
+    <div class="card">
+      <h2>Inteligencia Artificial</h2>
+      <p>Descubre cómo la IA está revolucionando sectores desde la medicina hasta la automatización del hogar.</p>
+    </div>
+    <div class="card">
+      <h2>Internet de las Cosas (IoT)</h2>
+      <p>Conecta tu mundo físico al digital con sensores inteligentes y dispositivos conectados.</p>
+    </div>
+    <div class="card">
+      <h2>Computación en la Nube</h2>
+      <p>Accede a tu información desde cualquier parte del mundo de forma segura y escalable.</p>
+    </div>
+  </section>
 </body>
 </html>
