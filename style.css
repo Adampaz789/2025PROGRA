@@ -57,7 +57,7 @@ header p {
 
 .barras {
   display: none;
-  position: absolute;
+  position: relative;
   top: 15px;
   right: 20px;
   z-index: 1000;
@@ -139,7 +139,7 @@ section {
   }
 
   nav {
-    position: absolute;
+    position: relative;
     top: 60px;
     right: 0;
     width: 70%;
