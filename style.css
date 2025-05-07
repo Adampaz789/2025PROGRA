@@ -139,7 +139,7 @@ section {
   }
 
   nav {
-    position: relative;
+    position:absolute;
     top: 60px;
     right: 0;
     width: 70%;
